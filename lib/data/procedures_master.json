@@ -1,0 +1,685 @@
+{
+  "procedures": [
+    {
+      "id": "hosp_001",
+      "life_stage_id": 1,
+      "category": "入院準備",
+      "title": "救急搬送への対応",
+      "description": "家族が急病の際、救急車を呼び病院へ搬送してもらう手続き",
+      "contact_method": "電話",
+      "required_documents": [],
+      "required_info": ["症状の説明", "既往歴", "服用薬"],
+      "deadline_info": "緊急時は即座に119番",
+      "estimated_time": "搬送自体は1-2時間",
+      "tips": [
+        "黒い便など気になる症状は必ず伝える",
+        "かかりつけ医の情報を準備",
+        "保険証を忘れずに"
+      ],
+      "common_mistakes": ["症状を過小評価して伝える"],
+      "dependencies": [],
+      "difficulty_factors": {
+        "requires_physical_presence": true,
+        "multiple_visits_needed": false,
+        "emotional_burden": "high",
+        "complexity": "medium"
+      }
+    },
+    {
+      "id": "hosp_002",
+      "life_stage_id": 1,
+      "category": "入院準備",
+      "title": "入院手続き・同意書の記入",
+      "description": "入院時に必要な大量の書類への記入。同じ内容を何度も書くことが多い",
+      "contact_method": "対面",
+      "required_documents": ["健康保険証", "印鑑", "診察券"],
+      "required_info": ["住所", "患者名", "連絡先", "既往歴", "アレルギー"],
+      "estimated_time": "1-2時間",
+      "tips": [
+        "住所などの基本情報はメモを用意しておく",
+        "印鑑は複数持参すると安心",
+        "記入済み書類のコピーをもらっておく"
+      ],
+      "common_mistakes": ["印鑑を忘れる", "保証人の連絡先が不明"],
+      "dependencies": ["hosp_001"],
+      "difficulty_factors": {
+        "requires_physical_presence": true,
+        "multiple_visits_needed": false,
+        "emotional_burden": "high",
+        "complexity": "high"
+      }
+    },
+    {
+      "id": "hosp_003",
+      "life_stage_id": 1,
+      "category": "入院準備",
+      "title": "医療保険の確認・申請準備",
+      "description": "加入している医療保険（がん保険等）の確認と、将来の申請に向けた準備",
+      "contact_method": "電話",
+      "required_documents": ["保険証書", "印鑑"],
+      "required_info": ["被保険者情報", "受取人情報", "親子関係の証明"],
+      "estimated_time": "保険会社との電話30分×複数回",
+      "tips": [
+        "まず保険証書を家中探す",
+        "代理人として連絡する場合は関係性の説明が必要",
+        "実際の申請は退院後になることが多い"
+      ],
+      "common_mistakes": ["保険証書の保管場所が不明", "受取人の確認漏れ"],
+      "dependencies": [],
+      "difficulty_factors": {
+        "requires_physical_presence": false,
+        "multiple_visits_needed": true,
+        "emotional_burden": "medium",
+        "complexity": "high"
+      }
+    },
+    {
+      "id": "hosp_004",
+      "life_stage_id": 1,
+      "category": "入院準備",
+      "title": "入院用品の準備",
+      "description": "入院生活に必要な日用品や着替えなどの準備",
+      "contact_method": "対面",
+      "required_documents": [],
+      "required_info": ["病院の持ち物リスト"],
+      "estimated_time": "準備に2-3時間",
+      "tips": [
+        "病院指定のリストを確認",
+        "名前を記入する",
+        "洗濯の頻度を考慮した枚数を用意"
+      ],
+      "common_mistakes": ["スリッパを忘れる", "名前の記入漏れ"],
+      "dependencies": ["hosp_002"],
+      "difficulty_factors": {
+        "requires_physical_presence": true,
+        "multiple_visits_needed": false,
+        "emotional_burden": "low",
+        "complexity": "low"
+      }
+    },
+    {
+      "id": "hosp_005",
+      "life_stage_id": 1,
+      "category": "入院準備",
+      "title": "家族への連絡体制構築",
+      "description": "入院中の連絡体制を家族間で確立する",
+      "contact_method": "電話",
+      "required_documents": [],
+      "required_info": ["家族の連絡先", "優先順位"],
+      "estimated_time": "1時間程度",
+      "tips": [
+        "LINEグループを作ると便利",
+        "病院からの連絡窓口を一本化",
+        "緊急時の判断者を決めておく"
+      ],
+      "common_mistakes": ["連絡の重複", "情報共有漏れ"],
+      "dependencies": [],
+      "difficulty_factors": {
+        "requires_physical_presence": false,
+        "multiple_visits_needed": false,
+        "emotional_burden": "medium",
+        "complexity": "medium"
+      }
+    },
+    {
+      "id": "hosp_006",
+      "life_stage_id": 1,
+      "category": "入院治療",
+      "title": "病院からの電話対応",
+      "description": "術後の様子、病状説明、退院準備など、病院からの非同期な電話連絡への対応",
+      "contact_method": "電話",
+      "required_documents": [],
+      "required_info": ["患者情報", "関係性"],
+      "deadline_info": "着信後なるべく早めに折り返し",
+      "estimated_time": "1回15-30分×複数回",
+      "tips": [
+        "病院の電話番号を登録しておく",
+        "折り返し時は病棟名を控えておく",
+        "重要な内容はメモを取る"
+      ],
+      "common_mistakes": ["病棟名がわからず繋いでもらえない", "医師の名前を忘れる"],
+      "dependencies": ["hosp_002"],
+      "difficulty_factors": {
+        "requires_physical_presence": false,
+        "multiple_visits_needed": true,
+        "emotional_burden": "high",
+        "complexity": "medium"
+      }
+    },
+    {
+      "id": "hosp_007",
+      "life_stage_id": 1,
+      "category": "入院治療",
+      "title": "退院支援チームとの相談",
+      "description": "退院後の生活や次の入院先（リハビリ等）について相談",
+      "contact_method": "対面",
+      "required_documents": [],
+      "required_info": ["退院後の生活環境", "家族のサポート体制"],
+      "estimated_time": "面談1時間×複数回",
+      "tips": [
+        "退院後の不安は遠慮なく相談",
+        "リハビリ入院は最大30日の制限あり",
+        "ソーシャルワーカーの活用"
+      ],
+      "common_mistakes": ["退院を急ぎすぎる", "家族の負担を過小評価"],
+      "dependencies": ["hosp_006"],
+      "difficulty_factors": {
+        "requires_physical_presence": true,
+        "multiple_visits_needed": true,
+        "emotional_burden": "medium",
+        "complexity": "medium"
+      }
+    },
+    {
+      "id": "care_001",
+      "life_stage_id": 2,
+      "category": "介護申請",
+      "title": "ケアマネージャーへの連絡・相談",
+      "description": "現在の状況を説明し、今後の介護サービスについて相談",
+      "contact_method": "電話",
+      "required_documents": [],
+      "required_info": ["現在の状況", "希望するサービス"],
+      "estimated_time": "初回相談30分-1時間",
+      "tips": [
+        "事前に状況を整理しておく",
+        "ケアマネは多忙なので要点を絞る",
+        "定期的な相談が重要"
+      ],
+      "common_mistakes": ["問題を一人で抱え込む", "相談のタイミングが遅い"],
+      "dependencies": [],
+      "difficulty_factors": {
+        "requires_physical_presence": false,
+        "multiple_visits_needed": false,
+        "emotional_burden": "medium",
+        "complexity": "low"
+      }
+    },
+    {
+      "id": "care_002",
+      "life_stage_id": 2,
+      "category": "介護申請",
+      "title": "要介護認定の申請",
+      "description": "市区町村の窓口で要介護認定を申請。認定まで約1ヶ月かかる",
+      "contact_method": "対面",
+      "required_documents": ["介護保険証", "印鑑", "主治医意見書"],
+      "required_info": ["本人の状態", "主治医情報"],
+      "deadline_info": "必要になる1ヶ月前には申請",
+      "estimated_time": "申請30分、認定まで1ヶ月",
+      "tips": [
+        "早めの申請が肝心",
+        "主治医との連携が重要",
+        "認定調査時は普段の様子を正直に"
+      ],
+      "common_mistakes": ["申請が遅れてサービスが受けられない", "状態を良く見せようとする"],
+      "dependencies": ["care_001"],
+      "difficulty_factors": {
+        "requires_physical_presence": true,
+        "multiple_visits_needed": true,
+        "emotional_burden": "medium",
+        "complexity": "medium"
+      }
+    },
+    {
+      "id": "care_003",
+      "life_stage_id": 2,
+      "category": "介護申請",
+      "title": "ショートステイの手配",
+      "description": "一時的に施設で預かってもらうサービスの手配。期間の延長も可能",
+      "contact_method": "電話",
+      "required_documents": ["介護保険証", "契約書類"],
+      "required_info": ["希望期間", "本人の状態"],
+      "deadline_info": "希望日の1週間前には予約",
+      "estimated_time": "手配1時間、契約時2時間",
+      "tips": [
+        "人気施設は早めに予約",
+        "延長する場合は早めに連絡",
+        "持ち物リストをしっかり確認"
+      ],
+      "common_mistakes": ["延長連絡を忘れて退去扱いに", "持ち物の名前記入漏れ"],
+      "dependencies": ["care_002"],
+      "difficulty_factors": {
+        "requires_physical_presence": true,
+        "multiple_visits_needed": false,
+        "emotional_burden": "high",
+        "complexity": "medium"
+      }
+    },
+    {
+      "id": "facility_001",
+      "life_stage_id": 3,
+      "category": "施設選び",
+      "title": "施設の種類を理解する",
+      "description": "特養、老健、有料老人ホーム等の違いを理解し、適切な施設を選ぶ",
+      "contact_method": "オンライン",
+      "required_documents": [],
+      "required_info": ["予算", "介護度", "希望条件"],
+      "estimated_time": "調査に3-5時間",
+      "tips": [
+        "公的施設と民間施設の違いを理解",
+        "介護付きと住宅型の違いに注意",
+        "グループホームは認知症専門"
+      ],
+      "common_mistakes": ["費用だけで選ぶ", "施設の種類を誤解"],
+      "dependencies": [],
+      "difficulty_factors": {
+        "requires_physical_presence": false,
+        "multiple_visits_needed": false,
+        "emotional_burden": "medium",
+        "complexity": "high"
+      }
+    },
+    {
+      "id": "facility_002",
+      "life_stage_id": 3,
+      "category": "施設選び",
+      "title": "候補施設のリストアップ",
+      "description": "条件に合う施設を15箇所程度リストアップし、Excelで管理",
+      "contact_method": "オンライン",
+      "required_documents": [],
+      "required_info": ["希望エリア", "予算", "必要なサービス"],
+      "estimated_time": "3-5時間",
+      "tips": [
+        "検索サイト経由は仲介料がかかる",
+        "直接問い合わせがお得",
+        "料金・サービス・空き状況を整理"
+      ],
+      "common_mistakes": ["リストが少なすぎる", "条件を絞りすぎる"],
+      "dependencies": ["facility_001"],
+      "difficulty_factors": {
+        "requires_physical_presence": false,
+        "multiple_visits_needed": false,
+        "emotional_burden": "low",
+        "complexity": "medium"
+      }
+    },
+    {
+      "id": "facility_003",
+      "life_stage_id": 3,
+      "category": "施設選び",
+      "title": "施設への電話問い合わせ",
+      "description": "リストアップした施設に片っ端から電話し、空き状況や条件を確認",
+      "contact_method": "電話",
+      "required_documents": [],
+      "required_info": ["両親の状況", "希望時期", "予算"],
+      "estimated_time": "1施設15分×15箇所",
+      "tips": [
+        "状況説明を簡潔にまとめておく",
+        "同じ説明の繰り返しに備える",
+        "断られても落ち込まない"
+      ],
+      "common_mistakes": ["説明が長すぎる", "メモを取らない"],
+      "dependencies": ["facility_002"],
+      "difficulty_factors": {
+        "requires_physical_presence": false,
+        "multiple_visits_needed": true,
+        "emotional_burden": "medium",
+        "complexity": "low"
+      }
+    },
+    {
+      "id": "facility_004",
+      "life_stage_id": 3,
+      "category": "施設選び",
+      "title": "施設見学の予約・実施",
+      "description": "候補施設を実際に見学し、雰囲気や設備を確認",
+      "contact_method": "対面",
+      "required_documents": [],
+      "required_info": ["見学希望日時", "質問事項"],
+      "estimated_time": "1施設2時間×6箇所",
+      "tips": [
+        "平日昼間の見学がおすすめ",
+        "食事時間帯の様子も重要",
+        "スタッフの対応をよく観察"
+      ],
+      "common_mistakes": ["見た目だけで判断", "質問を遠慮する"],
+      "dependencies": ["facility_003"],
+      "difficulty_factors": {
+        "requires_physical_presence": true,
+        "multiple_visits_needed": true,
+        "emotional_burden": "medium",
+        "complexity": "medium"
+      }
+    },
+    {
+      "id": "eol_001",
+      "life_stage_id": 4,
+      "category": "看取り準備",
+      "title": "延命治療の意思確認",
+      "description": "本人の延命治療に関する意思を確認し、家族で共有",
+      "contact_method": "対面",
+      "required_documents": [],
+      "required_info": ["本人の価値観", "家族の考え"],
+      "estimated_time": "話し合い1-2時間×複数回",
+      "tips": [
+        "元気なうちに話し合う",
+        "書面で残すことも検討",
+        "定期的に確認する"
+      ],
+      "common_mistakes": ["話し合いを先延ばし", "家族間で意見の相違"],
+      "dependencies": [],
+      "difficulty_factors": {
+        "requires_physical_presence": true,
+        "multiple_visits_needed": true,
+        "emotional_burden": "high",
+        "complexity": "high"
+      }
+    },
+    {
+      "id": "eol_002",
+      "life_stage_id": 4,
+      "category": "看取り準備",
+      "title": "葬儀社の選定・事前相談",
+      "description": "葬儀社を事前に選定し、希望や費用について相談",
+      "contact_method": "対面",
+      "required_documents": [],
+      "required_info": ["希望の形式", "予算", "宗派"],
+      "estimated_time": "相談2時間",
+      "tips": [
+        "事前相談で見通しが立つ",
+        "複数社で見積もり比較",
+        "家族葬の選択肢も検討"
+      ],
+      "common_mistakes": ["急な時に慌てて決める", "費用の確認不足"],
+      "dependencies": [],
+      "difficulty_factors": {
+        "requires_physical_presence": true,
+        "multiple_visits_needed": false,
+        "emotional_burden": "high",
+        "complexity": "medium"
+      }
+    },
+    {
+      "id": "eol_003",
+      "life_stage_id": 4,
+      "category": "看取り準備",
+      "title": "遺言書の作成支援",
+      "description": "自筆証書遺言の要件を調べ、本人の遺言書作成を支援",
+      "contact_method": "対面",
+      "required_documents": ["印鑑"],
+      "required_info": ["財産状況", "相続人", "遺言内容"],
+      "deadline_info": "元気なうちに作成",
+      "estimated_time": "準備2時間、作成1時間",
+      "tips": [
+        "要件を満たさないと無効に",
+        "日付と署名は必須",
+        "財産目録を別途作成"
+      ],
+      "common_mistakes": ["要件不備で無効", "保管場所を伝えない"],
+      "dependencies": [],
+      "difficulty_factors": {
+        "requires_physical_presence": true,
+        "multiple_visits_needed": false,
+        "emotional_burden": "high",
+        "complexity": "high"
+      }
+    },
+    {
+      "id": "inherit_001",
+      "life_stage_id": 5,
+      "category": "相続手続き",
+      "title": "死亡届の提出",
+      "description": "死亡診断書を持って市区町村役場に死亡届を提出",
+      "contact_method": "対面",
+      "required_documents": ["死亡診断書", "印鑑"],
+      "required_info": ["死亡日時", "届出人情報"],
+      "deadline_info": "死亡を知った日から7日以内",
+      "estimated_time": "役所で30分",
+      "tips": [
+        "葬儀社が代行してくれることも",
+        "火葬許可証も同時に取得",
+        "除籍謄本の取得も検討"
+      ],
+      "common_mistakes": ["期限を過ぎる", "必要書類の不備"],
+      "dependencies": [],
+      "difficulty_factors": {
+        "requires_physical_presence": true,
+        "multiple_visits_needed": false,
+        "emotional_burden": "high",
+        "complexity": "low"
+      }
+    },
+    {
+      "id": "inherit_002",
+      "life_stage_id": 5,
+      "category": "相続手続き",
+      "title": "年金の停止手続き",
+      "description": "年金事務所に連絡し、受給停止の手続きを行う",
+      "contact_method": "複数",
+      "required_documents": ["年金証書", "死亡診断書", "戸籍謄本"],
+      "required_info": ["基礎年金番号", "死亡日"],
+      "deadline_info": "速やかに（14日以内推奨）",
+      "estimated_time": "電話30分、窓口1時間",
+      "tips": [
+        "未支給年金の請求も同時に",
+        "遺族年金の相談も可能",
+        "必要書類を事前確認"
+      ],
+      "common_mistakes": ["手続きの遅れで返納発生", "遺族年金の申請漏れ"],
+      "dependencies": ["inherit_001"],
+      "difficulty_factors": {
+        "requires_physical_presence": true,
+        "multiple_visits_needed": false,
+        "emotional_burden": "medium",
+        "complexity": "medium"
+      }
+    },
+    {
+      "id": "inherit_003",
+      "life_stage_id": 5,
+      "category": "相続手続き",
+      "title": "戸籍謄本の収集",
+      "description": "相続手続きに必要な出生から死亡までの戸籍謄本を収集",
+      "contact_method": "対面",
+      "required_documents": ["印鑑", "身分証明書"],
+      "required_info": ["本籍地", "筆頭者"],
+      "estimated_time": "1箇所1時間×複数箇所",
+      "tips": [
+        "転籍している場合は複数の役所へ",
+        "郵送請求も可能",
+        "複数部取得しておくと便利"
+      ],
+      "common_mistakes": ["必要な期間の漏れ", "部数不足"],
+      "dependencies": ["inherit_001"],
+      "difficulty_factors": {
+        "requires_physical_presence": true,
+        "multiple_visits_needed": true,
+        "emotional_burden": "low",
+        "complexity": "high"
+      }
+    },
+    {
+      "id": "inherit_004",
+      "life_stage_id": 5,
+      "category": "相続手続き",
+      "title": "遺言書の検認",
+      "description": "自筆証書遺言を家庭裁判所で検認してもらう手続き",
+      "contact_method": "対面",
+      "required_documents": ["遺言書", "戸籍謄本", "印鑑"],
+      "required_info": ["相続人全員の情報"],
+      "estimated_time": "申立て1時間、検認当日1時間",
+      "tips": [
+        "遺言書は開封しない",
+        "相続人全員の戸籍が必要",
+        "検認まで1-2ヶ月かかる"
+      ],
+      "common_mistakes": ["事前に開封してしまう", "戸籍の収集漏れ"],
+      "dependencies": ["inherit_003"],
+      "difficulty_factors": {
+        "requires_physical_presence": true,
+        "multiple_visits_needed": true,
+        "emotional_burden": "medium",
+        "complexity": "high"
+      }
+    },
+    {
+      "id": "inherit_005",
+      "life_stage_id": 5,
+      "category": "相続手続き",
+      "title": "銀行口座の相続手続き",
+      "description": "故人の銀行口座の凍結解除と相続手続き",
+      "contact_method": "対面",
+      "required_documents": ["遺言書", "戸籍謄本", "印鑑証明書"],
+      "required_info": ["口座情報", "相続人情報"],
+      "estimated_time": "1行2時間×複数行",
+      "tips": [
+        "各銀行で必要書類が異なる",
+        "相続人全員の同意が必要な場合も",
+        "残高証明書の取得も"
+      ],
+      "common_mistakes": ["必要書類の不足", "印鑑相違"],
+      "dependencies": ["inherit_004"],
+      "difficulty_factors": {
+        "requires_physical_presence": true,
+        "multiple_visits_needed": true,
+        "emotional_burden": "medium",
+        "complexity": "high"
+      }
+    },
+    {
+      "id": "inherit_006",
+      "life_stage_id": 5,
+      "category": "相続手続き",
+      "title": "不動産の相続登記",
+      "description": "土地・建物の名義変更を法務局で行う。3年以内の義務",
+      "contact_method": "対面",
+      "required_documents": ["登記申請書", "遺言書", "戸籍謄本", "固定資産評価証明書"],
+      "required_info": ["不動産の詳細", "登記事項"],
+      "deadline_info": "相続を知った日から3年以内",
+      "estimated_time": "準備3時間、申請1時間",
+      "tips": [
+        "司法書士に依頼も可能",
+        "登録免許税の計算必要",
+        "オンライン申請も可能"
+      ],
+      "common_mistakes": ["期限超過で過料", "必要書類の不備"],
+      "dependencies": ["inherit_004", "inherit_003"],
+      "difficulty_factors": {
+        "requires_physical_presence": true,
+        "multiple_visits_needed": true,
+        "emotional_burden": "low",
+        "complexity": "high"
+      }
+    },
+    {
+      "id": "property_001",
+      "life_stage_id": 5,
+      "category": "実家管理",
+      "title": "電気・ガス・水道の停止",
+      "description": "空き家となる実家のライフラインを停止または契約変更",
+      "contact_method": "電話",
+      "required_documents": [],
+      "required_info": ["お客様番号", "契約者情報"],
+      "estimated_time": "各社30分×3社",
+      "tips": [
+        "水道はトイレ使用のため継続も検討",
+        "基本料金だけでもかかることに注意",
+        "立ち会い不要の場合が多い"
+      ],
+      "common_mistakes": ["解約忘れで料金発生", "再開時の手間を考慮せず"],
+      "dependencies": [],
+      "difficulty_factors": {
+        "requires_physical_presence": false,
+        "multiple_visits_needed": false,
+        "emotional_burden": "low",
+        "complexity": "low"
+      }
+    },
+    {
+      "id": "property_002",
+      "life_stage_id": 5,
+      "category": "実家管理",
+      "title": "郵便物の転送届",
+      "description": "実家宛の郵便物を自宅に転送する手続き",
+      "contact_method": "オンライン",
+      "required_documents": [],
+      "required_info": ["転送元・先住所", "開始日"],
+      "deadline_info": "転送開始希望日の1週間前",
+      "estimated_time": "オンライン10分",
+      "tips": [
+        "1年間の転送が基本",
+        "更新も可能",
+        "重要郵便物の送付先変更も忘れずに"
+      ],
+      "common_mistakes": ["転送期限切れ", "宅配便は対象外"],
+      "dependencies": [],
+      "difficulty_factors": {
+        "requires_physical_presence": false,
+        "multiple_visits_needed": false,
+        "emotional_burden": "low",
+        "complexity": "low"
+      }
+    },
+    {
+      "id": "property_003",
+      "life_stage_id": 5,
+      "category": "実家管理",
+      "title": "固定電話・インターネットの解約",
+      "description": "不要となった通信サービスの解約手続き",
+      "contact_method": "電話",
+      "required_documents": [],
+      "required_info": ["契約者情報", "解約希望日"],
+      "estimated_time": "電話30分、工事立ち会い1時間",
+      "tips": [
+        "光回線の撤去工事は立ち会い必要",
+        "解約金の確認",
+        "機器の返却を忘れずに"
+      ],
+      "common_mistakes": ["機器返却忘れで請求", "解約金の見落とし"],
+      "dependencies": [],
+      "difficulty_factors": {
+        "requires_physical_presence": true,
+        "multiple_visits_needed": false,
+        "emotional_burden": "low",
+        "complexity": "medium"
+      }
+    },
+    {
+      "id": "misc_001",
+      "life_stage_id": 5,
+      "category": "その他",
+      "title": "サブスクリプションの解約",
+      "description": "Amazon Prime、Netflix等の月額サービスの解約",
+      "contact_method": "オンライン",
+      "required_documents": [],
+      "required_info": ["ログイン情報", "支払い情報"],
+      "estimated_time": "1サービス15分",
+      "tips": [
+        "二段階認証に注意",
+        "家族で共有している場合は相談",
+        "解約前にデータのバックアップ"
+      ],
+      "common_mistakes": ["ログイン情報不明", "解約し忘れで課金継続"],
+      "dependencies": [],
+      "difficulty_factors": {
+        "requires_physical_presence": false,
+        "multiple_visits_needed": false,
+        "emotional_burden": "low",
+        "complexity": "low"
+      }
+    },
+    {
+      "id": "misc_002",
+      "life_stage_id": 5,
+      "category": "その他",
+      "title": "クレジットカードの解約",
+      "description": "使用しなくなったクレジットカードの解約手続き",
+      "contact_method": "電話",
+      "required_documents": [],
+      "required_info": ["カード番号", "本人確認情報"],
+      "estimated_time": "1枚30分",
+      "tips": [
+        "引き落とし先の変更を先に",
+        "ポイントの確認",
+        "年会費の日割り計算確認"
+      ],
+      "common_mistakes": ["引き落とし先変更漏れ", "ポイント失効"],
+      "dependencies": ["misc_001"],
+      "difficulty_factors": {
+        "requires_physical_presence": false,
+        "multiple_visits_needed": false,
+        "emotional_burden": "low",
+        "complexity": "medium"
+      }
+    }
+  ]
+}
